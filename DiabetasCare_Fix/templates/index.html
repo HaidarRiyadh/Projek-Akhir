@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DiabetesCare</title>
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='swiper-bundle.min.css') }}">
+  <!-- CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="https://kit.fontawesome.com/0a7f05adab.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div id="header">
+    <div class="container">
+      <nav>
+        <img src="{{url_for('static', filename='images/diabetescare.png')}}"  class="logo">
+        <ul>
+          <li><a href="#header">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#diabetescare">DiabetasCare</a></li>
+          <li><a href="#informasis">Informasi</a></li>
+          <li><a href="#kami">About Us</a></li>
+        </ul>
+      </nav>
+      <div class="logo2">
+        <img src="{{url_for('static', filename='images/jantung.png')}}" class="logo3">
+      </div>
+      <div class="header-text">
+        <p></p>
+        <h1> <span>DiabetesCare</span>:<br>Informasi seputar Diabetes</h1>
+      </div>
+    </div>
+  </div>
+  <!-- about -->
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <img src="{{url_for('static', filename='images/d1.png')}}">
+        </div>
+        <div class="about-col-2">
+          <h1 class="sub-title">  Apa itu Diabetes?</h1>
+          <p class="chat">Diabetes mellitus, yang umumnya dikenal sebagai diabetes, adalah kelompok penyakit metabolik yang ditandai oleh kadar glukosa darah yang tinggi dalam jangka waktu yang lama. Kondisi ini terjadi karena tubuh tidak dapat memproduksi atau menggunakan insulin dengan baik. DiabatesCare hadir sebagai chatbot seputar diabetes.
+          </p>
+          <div class="tab-titles">
+            <p class="tab-links" onclick="opentab('modul')">Rekomendasi makanan mencegah Diabetes</p>
+            <p class="tab-links active-link" onclick="opentab('informasi')">Informasi DiabetesCare</p>
+          </div>
+          <div class="tab-contents active-tab" id="informasi">
+            <ul>
+              <li>DiabetesCare adalah chatbot yang dirancang khusus untuk memberikan informasi seputar diabetes. Diabetes adalah kondisi medis yang ditandai oleh tingginya kadar gula darah dalam tubuh. Chatbot ini dapat membantu pengguna dengan memberikan pengetahuan dasar tentang diabetes, jenis-jenis diabetes, faktor risiko, gejala, pengelolaan, dan perawatan yang dapat dilakukan.</li>
+            </ul>
+          </div>
+
+          
+
+          <div class="tab-contents" id="modul">
+            <ul>
+              <ul>
+                <li><span>Sayuran Hijau</span><br>Brokoli, bayam, kale, dan selada hijau merupakan contoh sayuran yang rendah kalori dan tinggi serat. Sayuran hijau kaya akan nutrisi dan antioksidan yang dapat membantu menjaga kesehatan dan mengurangi risiko diabetes.</li>
+                <li><span>Buah-buahan</span><br>Buah-buahan seperti apel, jeruk, blueberry, stroberi, dan kiwi mengandung serat alami dan vitamin yang penting untuk kesehatan. Pilihlah buah-buahan segar sebagai alternatif makanan manis yang alami dan menghindari jus buah yang tinggi gula tambahan.</li>
+                <li><span>Kacang-kacangan</span><br>Kacang almond, kacang tanah, kacang merah, dan kacang hijau merupakan sumber protein nabati yang baik dan mengandung serat yang tinggi. Konsumsi kacang-kacangan secara teratur dapat membantu menjaga kadar gula darah tetap stabil.</li>
+                <li><span>Ikan berlemak</span><br>Ikan seperti salmon, sarden, dan tuna mengandung asam lemak omega-3 yang baik untuk kesehatan jantung dan dapat membantu mengurangi risiko diabetes tipe 2. Disarankan untuk mengonsumsi ikan berlemak dua kali seminggu.</li>
+                <li><span>Gandum</span><br>Roti gandum utuh, beras merah, oatmeal, dan sereal gandum utuh mengandung serat tinggi dan karbohidrat kompleks yang dicerna lebih lambat oleh tubuh, sehingga membantu menjaga kadar gula darah stabil.</li>
+                </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+
+  <!-- Chatbot Body -->
+  <div class="chatbot-body" id="diabetescare">
+    <div class="msger">
+      <header class="msger-header">
+        <div class="msger-header-title">
+          </i> DiabetesCare <i class="fas fa-robot"></i>
+        </div>
+      </header>
+
+      <main class="msger-chat">
+        <div class="msg left-msg">
+          <div class="msg-img"></div>
+          <div class="msg-bubble">
+            <div class="msg-info">
+              <div class="msg-info-name">DiabetesCare</div>
+              <div class="now">Sekarang</div>
+            </div>
+
+            <div class="msg-text">
+              Halo! DiabetesCare disini, senang bertemu dengan anda! Mau tau informasi tentang Diabetes, kan?
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <form class="msger-inputarea">
+        <input type="text" class="msger-input" id="textInput" placeholder="Masukkan pesanmu disini...">
+        <button type="submit" class="msger-send-btn">Kirim</button>
+      </form>
+    </div>
+  </div>
+  <!-- Chatbot Body End  -->
+
+  <!-- Pusat Informasi -->
+  <div id="informasis">
+    <div class="container">
+      <h1 class="sub-title3">Pusat Informasi</h1>
+      <div class="socialmedia">
+        <div class="socialimg">
+          <img src="{{url_for('static', filename='images/data.png')}}">
+          <div class="layer">
+            <h2><b>Data Diabetes di Indonesia</b></h2><br>
+            <p>Berdasarkan Federasi Diabetes Internasional</p>
+            <a
+              href="https://www.diabetesatlas.org/data/en/country/94/id.html"><i
+                class="fa-solid fa-video"></i></a>
+          </div>
+        </div>
+        <div class="socialimg">
+          <img src="{{url_for('static', filename='images/obat.png')}}">
+          <div class="layer">
+            <h2><b>Obat Diabetes</b></h2><br>
+            <p>Informasi mengenai Obat Diabetes dari Kementrian Kesehatan</p>
+            <a href="https://yankes.kemkes.go.id/view_artikel/2051/mengenal-obat-diabetes"><i class="fa-sharp fa-solid fa-book"></i></a>
+          </div>
+        </div>
+        <div class="socialimg">
+          <img src="{{url_for('static', filename='images/sayuran.jpg')}}">
+          <div class="layer">
+            <h2><b>Pencegahan Diabetes</b></h2><br>
+            <p>Informasi Mengenai Pencegahan Terjadinya Diabetes</p>
+            <a href="https://yankes.kemkes.go.id/view_artikel/2227/9-cara-mencegah-diabetes-yang-bisa-dilakukan-mulai-hari-ini">
+              <i class="fa fa-shield" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end pusat informasi -->
+
+  <!-- Desain -->
+  <div id="kami">
+    <div class="container">
+      <div class="text-align:center mb-3">
+        <div class="col-md-6 offset-md-3">
+          <center><h2 style="text-align: center;">Tentang Kami</h2></center>
+        </div>
+      </div>
+      
+      <div class="row justify-content-center text-white">
+        <div class="col-md-4 mb-3">
+          <div class="card">
+            <img src="static/images/haidar.png" alt="Desain 1">
+            <div class="img-title">
+              <h3 style="color:   white; text-align:center">Haidariyad Iskandar</h3>
+              <p style="color: white;text-align:center">Universitas Dian Nuswantoro</p>
+            </div>
+          </div> 
+        </div>
+  
+        <div class="col-md-4 mb-3">
+          <div class="card">
+            <img src="static/images/arul.png" alt="Desain 2">
+            <div class="img-title">
+              <h3 style="color: white;text-align:center">Muhamad Akhirul Sidik</h3>
+              <p style="color: white;text-align:center">Universitas Kuningan</p>              
+            </div>
+          </div> 
+        </div>
+  
+        <div class="col-md-4 mb-3">
+          <div class="card">
+            <img src="static/images/sasha.png" alt="Desain 3">
+            <div class="img-title">
+              <h3 style="color: white;text-align:center">Elyza Dewi Fortuna</h3>
+              <p style="color: white;text-align:center">Universitas Muria Kudus</p>
+            </div>
+          </div> 
+        </div>
+  
+        <div class="col-md-4 mb-3">
+          <div class="card">
+            <img src="static/images/fauzan.png" alt="Desain 4">
+            <div class="img-title">
+              <h3 style="color: white;text-align:center">Fauzan Nur Cholis</h3>
+              <p style="color: white;text-align:center">Universitas Pembangunan Nasional Veteran Yogyakarta</p>
+            </div>
+          </div> 
+        </div>     
+      </div>                   
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#da1b94" fill-opacity="1" d="M0,160L48,181.3C96,203,192,245,288,234.7C384,224,480,160,576,149.3C672,139,768,181,864,197.3C960,213,1056,203,1152,192C1248,181,1344,171,1392,165.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg> 
+  </section>
+  <!-- Akhir Desain -->
+  
+
+
+
+
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzyLOYsdN_GRCLYpa6d2a27qPZ8mL8apTyT6SPAyKOrDGxPUd7PwhprvoJ_83LhKa2utQ/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+          msg.innerHTML = "Laporan berhasil dikirim"
+          setTimeout(function () {
+            msg.innerHTML = ""
+          }, 5000)
+          form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+    integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="{{ url_for('static', filename='js/all.js') }}"></script>
+  <script>
+    const msgerForm = get(".msger-inputarea");
+    const msgerInput = get(".msger-input");
+    const msgerChat = get(".msger-chat");
+
+    // Icons made by Freepik from www.flaticon.com
+    const BOT_IMG = "/static/images/bot.png";
+    const PERSON_IMG = "/static/images/user1.png";
+    const BOT_NAME = "DiabetesCare";
+    const PERSON_NAME = "Kamu";
+
+    msgerForm.addEventListener("submit", event => {
+      event.preventDefault();
+
+      const msgText = msgerInput.value;
+      if (!msgText) return;
+
+      appendMessage(PERSON_NAME, PERSON_IMG, "right", msgText);
+      msgerInput.value = "";
+      botResponse(msgText);
+    });
+
+    function appendMessage(name, img, side, text) {
+      //   Simple solution for small apps
+      const msgHTML = `
+          <div class="msg ${side}-msg">
+            <div class="msg-img" style="background-image: url(${img})"></div>
+  
+            <div class="msg-bubble">
+              <div class="msg-info">
+                <div class="msg-info-name">${name}</div>
+                <div class="msg-info-time">${formatDate(new Date())}</div>
+              </div>
+  
+              <div class="msg-text">${text}</div>
+            </div>
+          </div>
+          `;
+
+      msgerChat.insertAdjacentHTML("beforeend", msgHTML);
+      msgerChat.scrollTop += 500;
+    }
+
+    function botResponse(rawText) {
+      // Bot Response
+      $.get("/get", { msg: rawText }).done(function (data) {
+        console.log(rawText);
+        console.log(data);
+        const msgText = data;
+        appendMessage(BOT_NAME, BOT_IMG, "left", msgText);
+
+      });
+
+    }
+
+    // Utils
+    function get(selector, root = document) {
+      return root.querySelector(selector);
+    }
+
+    function formatDate(date) {
+      const h = "0" + date.getHours();
+      const m = "0" + date.getMinutes();
+
+      return `${h.slice(-2)}:${m.slice(-2)}`;
+    }
+  </script>
+  <script src="{{ url_for('static', filename='js/diabetescare.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/swiper-bundle.min.js') }}"></script>
+
+  <!-- JavaScript -->
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>
